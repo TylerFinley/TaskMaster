@@ -7,4 +7,8 @@ class Todo
   define_method(:description) do
     @description
   end
+
+  define_singleton_method(:all) do
+    []
+  end
 end

@@ -8,4 +8,10 @@ describe(Todo) do
       expect(to_do_task.description()).to(eq("buy milk"))
     end
   end
+
+    describe('.all') do
+      it('is empty at first') do
+        expect(Todo.all()).to(eq([]))
+      end
+    end
 end
