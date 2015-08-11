@@ -20,6 +20,13 @@ describe(Todo) do
         test_task = Todo.new("throw the old milk out")
         test_task.save()
         expect(Todo.all()).to(eq([test_task]))
+      end
     end
+    describe(".clear") do
+      it("empties out all of the saved tasks") do
+        Todo.new('recycle the empty milk carton')
+        Todo.clear()
+        expect(Todo.all()).to(eq([]))
+      end
   end
 end
